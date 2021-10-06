@@ -1,7 +1,11 @@
 {
   "name": "react-boilerplate",
   "version": "0.1.0",
+  "description": "React base setup for developing application freshly",
   "private": true,
+  "author": {
+    "name": "vinoth kumar"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
