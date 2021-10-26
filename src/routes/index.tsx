@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ROUTES, { RenderRoutes } from "./routes";
+import SuspenseSpinner from "components/SuspenseFallback";
 
 const routes: React.FunctionComponent = () => {
     return (
-        <RenderRoutes routes={ROUTES} />
+        <Suspense fallback={<SuspenseSpinner />}>
+            <RenderRoutes routes={ROUTES} />
+        </Suspense>
     );
 }
 

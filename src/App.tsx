@@ -1,21 +1,34 @@
 import React from 'react'
 import { ThemeProvider } from "styled-components";
 // import themes from 'constants/theme'
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import Routes from './routes'
 import store from 'store'
 import { Provider } from 'react-redux'
-import 'assets/theme/main.scss'
-const theme = require('sass-extract-loader?{"plugins": ["sass-extract-js"]}!./assets/theme/variables.scss');
+import theme from './styles/theme'
+import GlobalStyle from './styles/globalStyle'
+import ErrorBoundary from 'components/ErrorBoundaries';
+import { ToastContainer } from 'react-toastify';
+import { history } from 'helpers';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'assets/icomoon/style.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App: React.FunctionComponent = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <Router history={history}>
         <ThemeProvider theme={theme}>
-          <Routes />
+          <ErrorBoundary>
+            <GlobalStyle />
+            <Routes />
+            <ToastContainer
+              position="bottom-right"
+              autoClose={5000}
+            />
+          </ErrorBoundary>
         </ThemeProvider>
-      </BrowserRouter>
+      </Router>
     </Provider>
   )
 }

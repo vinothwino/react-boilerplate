@@ -1,18 +1,25 @@
 import { Redirect } from "react-router-dom";
-import { WelcomeCard, WelcomeContainer } from './style'
+import * as  S from './style'
 import { Row, Col } from 'react-bootstrap'
 import Button from 'components/Button'
 
-export default function Login() {
+
+export default function Login(props) {
+
+    const login = () => {
+        localStorage.setItem('token', 'token')
+        props.history.push('/app')
+    }
+
     // if user already "authenticated", redirect them to the app
-    if (localStorage.getItem("user"))
+    if (localStorage.getItem("token"))
         return <Redirect to={"/app"} />;
 
     return (
-        <WelcomeContainer>
+        <S.WelcomeContainer>
             <Row>
                 <Col md="5">
-                    <WelcomeCard>
+                    <S.WelcomeCard>
                         <h1>Hello warrior</h1>
                         <p>
                             Let's start coding
@@ -20,12 +27,12 @@ export default function Login() {
                         <p>
                             Yahhh ⚔️
                         </p>
-                        <Button>
+                        <Button onClick={login}>
                             Start battle
                         </Button>
-                    </WelcomeCard>
+                    </S.WelcomeCard>
                 </Col>
             </Row>
-        </WelcomeContainer >
+        </S.WelcomeContainer >
     );
 }
