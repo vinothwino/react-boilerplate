@@ -3,8 +3,8 @@ import thunk from 'redux-thunk'
 import rootReducer from './reducers'
 import API from 'service/api'
 import API_BOOK from 'service/endpoints'
-import { history } from "helpers";
-import toast from "helpers/Toast";
+import { history } from "helpers/common";
+import toast from "components/Toast";
 
 const composeEnhancers = window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] as typeof compose || compose;
 const middlewareEnhancer = applyMiddleware(

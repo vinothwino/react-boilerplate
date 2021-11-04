@@ -9,7 +9,7 @@ import theme from './styles/theme'
 import GlobalStyle from './styles/globalStyle'
 import ErrorBoundary from 'components/ErrorBoundaries';
 import { ToastContainer } from 'react-toastify';
-import { history } from 'helpers';
+import { history } from 'helpers/common';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'assets/icomoon/style.css';
 import 'react-toastify/dist/ReactToastify.css';
