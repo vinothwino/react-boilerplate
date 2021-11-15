@@ -1,6 +1,6 @@
 // Button.stories.js | Button.stories.jsx
 
-import Button from './index';
+import { Button } from './Button';
 
 const Template = (args) => <Button {...args} />;
 

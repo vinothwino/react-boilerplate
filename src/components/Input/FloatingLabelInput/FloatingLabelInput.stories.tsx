@@ -1,6 +1,6 @@
 // FloatingLabelInput.stories.js | FloatingLabelInput.stories.jsx
 
-import FloatingLabelInput from './index';
+import { FloatingLabelInput } from './FloatingLabelInput';
 import withFormik from 'storybook-formik';
 import * as yup from 'yup'
 

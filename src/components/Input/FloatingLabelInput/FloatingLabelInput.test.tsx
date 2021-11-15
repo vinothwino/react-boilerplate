@@ -1,6 +1,6 @@
-import { render, waitFor } from 'test.utils'
+import { render } from 'test.utils'
 import { Route } from 'react-router-dom'
-import FloatingLabelInput from './index'
+import { FloatingLabelInput } from './FloatingLabelInput'
 import { Formik } from 'formik'
 import userEvent from '@testing-library/user-event'
 
@@ -16,6 +16,7 @@ let Component = <Route path="/" render={
                         type="text"
                         name="emailId"
                         label="Email ID"
+                        value={props.values.emailId}
 
                     >
                         Primary
@@ -32,8 +33,8 @@ describe('FloatingLabelInput', () => {
     })
     test('FloatingLabelInput | Onclick event is working', async () => {
         let { getByLabelText } = render(Component)
-        const inputElement = getByLabelText("Email ID")
+        const inputElement: any = getByLabelText("Email ID")
         userEvent.type(inputElement, 'test')
-        expect(inputElement).toContain('test')
+        expect(inputElement.value).toBe('test')
     })
 })

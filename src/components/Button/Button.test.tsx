@@ -1,6 +1,6 @@
 import { fireEvent, render, waitFor } from 'test.utils'
 import { Route } from 'react-router-dom'
-import Button from './index'
+import { Button } from './Button'
 
 const clickEvent = jest.fn();
 
