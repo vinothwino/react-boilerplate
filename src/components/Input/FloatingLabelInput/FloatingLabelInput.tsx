@@ -1,5 +1,5 @@
 import React from 'react';
-import { FloatingLabel } from './style'
+import { FloatingLabel } from './FloatingLabelInput.style'
 import { Form } from 'react-bootstrap'
 import FormikWrapper from '../common/FormikWrapper'
 import TextInput from '../common/TextInput'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeButton } from './style'
+import { ThemeButton } from './Button.style'
 import PropTypes from 'prop-types'
 
 interface ButtonProps {

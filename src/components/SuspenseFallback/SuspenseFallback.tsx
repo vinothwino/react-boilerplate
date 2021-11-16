@@ -1,6 +1,6 @@
 import React from 'react';
 import { Spinner } from "react-bootstrap";
-import { SuspenseContainer } from './style'
+import { SuspenseContainer } from './SuspenseFallback.style'
 
 interface SuspenseFallbackProps {
 

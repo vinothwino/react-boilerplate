@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrorContainer } from './style'
+import { ErrorContainer } from './ErrorBoundaries.style'
 
 type MyProps = {};
 type MyState = { hasError: boolean };

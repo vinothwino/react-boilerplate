@@ -1,5 +1,5 @@
 import { Redirect } from "react-router-dom";
-import * as  S from './style'
+import * as  S from './Login.style'
 import { Row, Col } from 'react-bootstrap'
 import Button from 'components/Button'
 
